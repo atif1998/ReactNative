@@ -10,7 +10,7 @@ export default function SecondScreen({navigation, route}) {
       <Text>{greeting}</Text>
       <Button
         title="Go to Third Screen"
-        onPress={() => navigation.push('Third')}
+        onPress={() => navigation.navigate('Third')}
       />
       <Button
         title="Go to Third Screen with Replace"

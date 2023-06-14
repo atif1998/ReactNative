@@ -19,8 +19,10 @@ export default function Login() {
       const data2 = await AsyncStorage.getItem('pass');
       if (data == email && data2 == password) {
         console.log('Login succesfull');
+      } else if (data != email) {
+        console.log('invalid  email');
       } else {
-        console.log('invalid');
+        console.log('invalid password');
       }
     } catch (err) {
       console.log(err);

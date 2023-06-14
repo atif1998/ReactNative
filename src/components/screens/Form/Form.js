@@ -5,27 +5,22 @@ import {
   StyleSheet,
   SafeAreaView,
   Button,
-  AsyncStorage
+  AsyncStorage,
 } from 'react-native';
 import React, {useState} from 'react';
-
-
 
 export default function Form() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = React.useState('');
 
-  const storeData=async()=>{
-    try{
-    await AsyncStorage.setItem(
-        "email",email
-      )
-      await AsyncStorage.setItem("pass",password)
-    } 
-    catch(err){
-      console.log(err)
+  const storeData = async () => {
+    try {
+      await AsyncStorage.setItem('email', email);
+      await AsyncStorage.setItem('pass', password);
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 
   return (
     <SafeAreaView>
@@ -41,11 +36,7 @@ export default function Form() {
         value={password}
         placeholder="Enter Password"
       />
-      <Button
-        color="#2196F3"
-        title="SignUp"
-        onPress={storeData}
-      />
+      <Button color="#2196F3" title="SignUp" onPress={storeData} />
     </SafeAreaView>
   );
 }
