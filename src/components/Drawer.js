@@ -1,72 +1,35 @@
-import React, {useRef, useState} from 'react';
-import {
-  Button,
-  DrawerLayoutAndroid,
-  Text,
-  StyleSheet,
-  View,
-} from 'react-native';
+import React from 'react';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import HomeScreen from '../Screens/HomeScreen';
+import SecondScreen from '../Screens/SecondScreen';
+import Setting from '../Screens/Setting';
+import Loader from '../Screens/Loader';
+import {Text, View} from 'react-native';
 
-const Drawer = () => {
-  const drawer = useRef(null);
-  const [drawerPosition, setDrawerPosition] = useState('left');
-  const changeDrawerPosition = () => {
-    if (drawerPosition === 'left') {
-      setDrawerPosition('right');
-    } else {
-      setDrawerPosition('left');
-    }
-  };
-
-  const navigationView = () => (
-    <View style={[styles.container, styles.navigationContainer]}>
-      <Text style={styles.paragraph}>I'm in the Drawer!</Text>
-      <Button
-        title="Close drawer"
-        onPress={() => drawer.current.closeDrawer()}
-      />
+function Here() {
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Home!</Text>
     </View>
   );
+}
 
+function Here2() {
   return (
-    <DrawerLayoutAndroid
-      ref={drawer}
-      drawerWidth={300}
-      drawerPosition={drawerPosition}
-      renderNavigationView={navigationView}>
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>Drawer on the {drawerPosition}!</Text>
-        <Button
-          title="Change Drawer Position"
-          onPress={() => changeDrawerPosition()}
-        />
-        <Text style={styles.paragraph}>
-          Swipe from the side or press button below to see it!
-        </Text>
-        <Button
-          title="Open drawer"
-          onPress={() => drawer.current.openDrawer()}
-        />
-      </View>
-    </DrawerLayoutAndroid>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Home2!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+const MyTabs = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="1" component={Here} />
+      <Tab.Screen name="2" component={Setting} />
+    </Tab.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 16,
-  },
-  navigationContainer: {
-    backgroundColor: '#ecf0f1',
-  },
-  paragraph: {
-    padding: 16,
-    fontSize: 15,
-    textAlign: 'center',
-  },
-});
-
-export default Drawer;
+export default MyTabs;
