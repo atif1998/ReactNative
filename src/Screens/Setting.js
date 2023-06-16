@@ -4,38 +4,31 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Setting = () => {
   return (
-    <View>
-      <View style={{marginTop: 20, marginBottom: 20}}>
-        <Ionicons name="reorder-four-sharp" size={40} />
+    <View style={styles.container}>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        }}>
+        <Ionicons name="reorder-three-outline" size={40} />
+        <Text style={{fontSize: 30, marginLeft: 10}}>SOFT UI</Text>
       </View>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{marginRight: 10}}>
+          <Ionicons name="notifications" size={40} />
+        </View>
 
-      <View style={styles.container}>
-        <View>
-          <Ionicons name="airplane-sharp" size={40} />
-        </View>
-        <View>
-          <Text style={{fontSize: 30}}>Airoplane mode</Text>
-        </View>
-        <View style={styles.input}>
-          <Ionicons name="wifi-outline" size={40} />
-        </View>
+        <Ionicons name="logo-instagram" size={40} />
       </View>
-      <Ionicons name="bluetooth-sharp" size={40} />
-      <Text style={{fontSize: 30}}>bluetooth</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 20,
     flexDirection: 'row',
-    height: 40,
-  },
-  input: {
-    flex: 1,
-    alignItems: 'flex-end',
+    justifyContent: 'space-between',
   },
 });
-
 export default Setting;
-<ion-icon name="menu-sharp"></ion-icon>;
