@@ -46,5 +46,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: 45,
     borderRadius: 10,
+    backgroundColor: 'red',
   },
 });

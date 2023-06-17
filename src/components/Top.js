@@ -34,7 +34,7 @@ const Card = () => {
     <View>
       {cards.map((items, key) => (
         <View style={styles.container}>
-          <Text>{items.key}</Text>
+          <Text>{key}</Text>
           <Image
             source={items.image}
             style={{height: 150, width: 350, marginLeft: 10, borderRadius: 8}}
@@ -43,9 +43,9 @@ const Card = () => {
           <Text style={{marginLeft: 10}}>{items.name}</Text>
           <Text style={{marginLeft: 10}}>{items.info}</Text>
           <View style={{flexDirection: 'row', marginLeft: 5}}>
-            <Ionicons name="location" size={20} />
+            <Ionicons name="location" size={20} color={'blue'} />
             <Text style={{marginLeft: 10}}>{items.location}</Text>
-            <Ionicons name="star" size={20} color={'red'} />
+            <Ionicons name="star" size={20} color={'#C13584'} />
             <Text>{items.star}</Text>
           </View>
         </View>
