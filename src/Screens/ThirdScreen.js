@@ -16,7 +16,7 @@ const icons = [
   },
   {
     name: 'MORE',
-    pic: <Ionicons name="train-outline" size={40} />,
+    pic: <Ionicons name="apps-outline" size={40} />,
   },
 ];
 

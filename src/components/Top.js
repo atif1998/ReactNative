@@ -1,18 +1,69 @@
-import React from 'react';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Setting from '../Screens/Setting';
-import HomeScreen from '../Screens/HomeScreen';
-import ThirdScreen from '../Screens/ThirdScreen';
+//import liraries
+import React, {Component} from 'react';
+import {View, Text, StyleSheet, Image} from 'react-native';
+import {img1} from '../assests/images/efiletower.jpg';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Tab = createMaterialTopTabNavigator();
-
-function Top() {
+const cards = [
+  {
+    name: 'Best Deal',
+    // image: img1,
+    image: require('../assests/images/efiletower.jpg'),
+    info: 'A graet to stay in france',
+    location: 'Paris,France',
+    star: 4.7,
+  },
+  {
+    name: 'Best Deal',
+    image: require('../assests/images/efiletower.jpg'),
+    info: 'A graet to stay in france',
+    location: 'Paris,France',
+    star: 4.7,
+  },
+  {
+    name: 'Best Deal',
+    image: require('../assests/images/efiletower.jpg'),
+    info: 'A graet to stay in france',
+    location: 'Paris,France',
+    star: 4.7,
+  },
+];
+// create a component
+const Card = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={Setting} />
-      <Tab.Screen name="info" component={ThirdScreen} />
-    </Tab.Navigator>
+    <View>
+      {cards.map((items, key) => (
+        <View style={styles.container}>
+          <Text>{items.key}</Text>
+          <Image
+            source={items.image}
+            style={{height: 150, width: 350, marginLeft: 10, borderRadius: 8}}
+          />
+
+          <Text style={{marginLeft: 10}}>{items.name}</Text>
+          <Text style={{marginLeft: 10}}>{items.info}</Text>
+          <View style={{flexDirection: 'row', marginLeft: 5}}>
+            <Ionicons name="location" size={20} />
+            <Text style={{marginLeft: 10}}>{items.location}</Text>
+            <Ionicons name="star" size={20} color={'red'} />
+            <Text>{items.star}</Text>
+          </View>
+        </View>
+      ))}
+    </View>
   );
-}
-export default Top;
+};
+
+// define your styles
+const styles = StyleSheet.create({
+  container: {
+    marginLeft: 13,
+    marginTop: 20,
+    borderWidth: 1,
+    width: 370,
+    borderRadius: 10,
+  },
+});
+
+//make this component available to the app
+export default Card;
