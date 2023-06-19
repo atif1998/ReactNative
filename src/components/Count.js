@@ -3,15 +3,22 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 const Count = () => {
   const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
+  const increment = () => setCount(prevCount => prevCount + 1);
+  const decrement = () => {
+    if (count === 0) return;
+    setCount(prevCount => prevCount - 1);
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.countContainer}>
         <Text>Count: {count}</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text>Press Here</Text>
+      <TouchableOpacity style={styles.button} onPress={increment}>
+        <Text>Increment</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={decrement}>
+        <Text>Decrement</Text>
       </TouchableOpacity>
     </View>
   );
