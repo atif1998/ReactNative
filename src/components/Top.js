@@ -57,10 +57,10 @@ const Card = () => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 13,
+    marginLeft: 5,
     marginTop: 20,
     borderWidth: 1,
-    width: 370,
+    width: 390,
     borderRadius: 10,
   },
 });

@@ -1,11 +1,10 @@
-import 'react-native-gesture-handler';
 import React from 'react';
 import Setting from './src/Screens/Setting';
 import HomeScreen from './src/Screens/HomeScreen';
 import ThirdScreen from './src/Screens/ThirdScreen';
 import Card from './src/components/Top';
-// import {ScrollView} from 'react-native-gesture-handler';
 import {ScrollView} from 'react-native';
+import Count from './src/components/Count';
 
 export default function App() {
   return (
@@ -13,6 +12,7 @@ export default function App() {
       <Setting />
       <HomeScreen />
       <ThirdScreen />
+      <Count />
       <Card />
     </ScrollView>
   );
