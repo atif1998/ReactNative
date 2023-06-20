@@ -1,7 +1,6 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import {img1} from '../assests/images/efiletower.jpg';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const cards = [
@@ -18,14 +17,14 @@ const cards = [
     image: require('../assests/images/efiletower.jpg'),
     info: 'A graet to stay in france',
     location: 'Paris,France',
-    star: 4.7,
+    star: 4.9,
   },
   {
     name: 'Best Deal',
     image: require('../assests/images/efiletower.jpg'),
     info: 'A graet to stay in france',
     location: 'Paris,France',
-    star: 4.7,
+    star: 4.5,
   },
 ];
 // create a component

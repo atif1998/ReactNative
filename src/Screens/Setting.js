@@ -15,7 +15,7 @@ const Setting = () => {
       </View>
       <View style={{flexDirection: 'row'}}>
         <View style={{marginRight: 10}}>
-          <Ionicons name="notifications" size={40} />
+          <Ionicons name="notifications" size={40} color={'orange'} />
         </View>
 
         <Ionicons name="logo-instagram" size={40} />
