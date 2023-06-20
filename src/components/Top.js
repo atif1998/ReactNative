@@ -37,7 +37,7 @@ const Card = () => {
           <Text>{key}</Text>
           <Image
             source={items.image}
-            style={{height: 150, width: 350, marginLeft: 10, borderRadius: 8}}
+            style={{height: 200, width: 370, marginLeft: 10, borderRadius: 8}}
           />
 
           <Text style={{marginLeft: 10}}>{items.name}</Text>

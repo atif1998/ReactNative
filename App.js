@@ -6,6 +6,8 @@ import Card from './src/components/Top';
 import {ScrollView} from 'react-native';
 import Count from './src/components/Count';
 import MyComponent from './src/components/Drawer';
+import DrawerExample from './src/components/Drawer';
+import Drawer from './src/components/Drawer';
 
 export default function App() {
   return (
@@ -15,7 +17,7 @@ export default function App() {
       <ThirdScreen />
       <Count />
       <Card />
-      <MyComponent />
+      <Drawer />
     </ScrollView>
   );
 }
