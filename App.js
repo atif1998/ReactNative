@@ -1,29 +1,19 @@
 import React from 'react';
-import {Text} from 'react-native-elements';
-import Setting from './src/Screens/Setting';
-import HomeScreen from './src/Screens/HomeScreen';
-import ThirdScreen from './src/Screens/ThirdScreen';
-import Card from './src/components/Top';
-import {ScrollView} from 'react-native';
-import Count from './src/components/Count';
-import Drawer from './src/components/Drawer';
-import Header from './src/components/Header';
-import Body from './src/components/Body';
-import Button from './src/components/Button';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-export default function App() {
+import Booking from './src/components/Booking';
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        marginBottom: 20,
-        backgroundColor: 'white',
-      }}>
-      <Header />
-      <Body />
-      <Body />
-      <Body />
-      <Body />
-      <Button />
-    </ScrollView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Booking} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+export default App;
