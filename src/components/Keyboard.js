@@ -1,53 +1,28 @@
-//import liraries
-import React, {Component, useEffect} from 'react';
-import {useState} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import React from 'react';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 
-// create a component
 const Keyboard = () => {
-  const [keyboardStatus, setKeyboardStatus] = useState('');
-
-  useEffect(() => {
-    const showSubscription = Keyboard.addListener('keyboardDidShow', () => {
-      setKeyboardStatus('Keyboard Shown');
-    });
-    const hideSubscription = Keyboard.addListener('keyboardDidHide', () => {
-      setKeyboardStatus('Keyboard Hidden');
-    });
-
-    return () => {
-      showSubscription.remove();
-      hideSubscription.remove();
-    };
-  }, []);
+  const {height, width, scale, fontScale} = useWindowDimensions();
   return (
-    <View style={style.container}>
-      <TextInput
-        style={style.input}
-        placeholder="Click here…"
-        onSubmitEditing={Keyboard.dismiss}
-      />
-      <Text style={style.status}>{keyboardStatus}</Text>
+    <View style={styles.container}>
+      <Text style={styles.header}>Window Dimension Data</Text>
+      <Text>Height: {Math.round(height)}</Text>
+      <Text>Width: {Math.floor(width)}</Text>
+      <Text>Font scale: {fontScale}</Text>
+      <Text>Pixel ratio: {scale}</Text>
     </View>
   );
 };
-
-// define your styles
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 36,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  input: {
-    padding: 10,
-    borderWidth: 0.5,
-    borderRadius: 4,
-  },
-  status: {
-    padding: 10,
-    textAlign: 'center',
+  header: {
+    fontSize: 20,
+    marginBottom: 12,
   },
 });
 
-//make this component available to the app
 export default Keyboard;

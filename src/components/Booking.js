@@ -19,6 +19,7 @@ export default function Booking() {
         <Body />
         <Body />
         <Book />
+        <Keyboard />
         <Button />
       </ScrollView>
     </View>
