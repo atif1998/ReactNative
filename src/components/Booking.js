@@ -4,6 +4,7 @@ import Header from './Header';
 import Body from './Body';
 import Button from './Button';
 import Book from './Book';
+import Keyboard from './Keyboard';
 export default function Booking() {
   return (
     <View>
