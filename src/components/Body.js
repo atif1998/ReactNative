@@ -20,23 +20,26 @@ const Body = () => {
     );
   }, []);
   return (
-    <View style={styles.container}>
-      <View
-        style={{
-          flexDirection: 'row',
-          marginTop: 20,
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}>
-        <Text style={styles.text1}>Room name</Text>
-        <Circle mainStyle={{marginRight: 20}} />
-      </View>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <Text style={{marginLeft: 30}}>
-          {currentDate} <Ionicons name="arrow-forward-outline" size={14} />
-          -3:00PM
-        </Text>
-        <Text style={styles.text2}>Duration: 4 h</Text>
+    <View style={{marginHorizontal: 24}}>
+      <View style={styles.container}>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: 5,
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <Text style={styles.text1}>Room name</Text>
+          <Circle mainStyle={{marginRight: 20}} />
+        </View>
+        <View
+          style={{flexDirection: 'row', alignItems: 'center', marginTop: 5}}>
+          <Text style={{marginLeft: 30}}>
+            {currentDate} <Ionicons name="arrow-forward-outline" size={14} />
+            -3:00PM
+          </Text>
+          <Text style={styles.text2}>Duration: 4 h</Text>
+        </View>
       </View>
     </View>
   );
@@ -45,10 +48,9 @@ const Body = () => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 17,
     backgroundColor: '#F5F6F4',
     borderRadius: 20,
-    width: 377,
+    // width: 377,
     height: 104,
     marginTop: 16,
   },
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 28,
     color: '#565556',
-    marginLeft: 50,
+    marginLeft: 30,
     alignItems: 'flex-end',
   },
 });
