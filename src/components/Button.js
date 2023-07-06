@@ -1,17 +1,19 @@
 //import liraries
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, {Component, useState} from 'react';
+import {View, Text, StyleSheet, TextInput} from 'react-native';
 
 // create a component
 const Button = ({naviagtion}) => {
   return (
-    <View style={styles.container}>
-      <Text
-        style={{
-          color: '#8D55A2',
-        }}>
-        Button
-      </Text>
+    <View>
+      <View style={styles.container}>
+        <Text
+          style={{
+            color: '#8D55A2',
+          }}>
+          Button
+        </Text>
+      </View>
     </View>
   );
 };

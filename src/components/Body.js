@@ -20,7 +20,7 @@ const Body = () => {
     );
   }, []);
   return (
-    <View style={{marginHorizontal: 24}}>
+    <View style={{marginHorizontal: 23}}>
       <View style={styles.container}>
         <View
           style={{

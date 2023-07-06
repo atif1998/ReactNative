@@ -4,8 +4,9 @@ import Header from './Header';
 import Body from './Body';
 import Button from './Button';
 import Book from './Book';
-import Keyboard from './Keyboard';
 import Header2 from './Header3';
+import Table from './Table';
+
 export default function Booking() {
   return (
     <View>
@@ -21,6 +22,7 @@ export default function Booking() {
         <Body />
         <Body />
         <Book />
+        <Table />
         <Button />
       </ScrollView>
     </View>
