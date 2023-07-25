@@ -14,6 +14,7 @@ const Table = () => {
   return (
     <View style={styles.centeredView}>
       <Modal
+        style={{justifyContent: 'flex-end', margin: 0}}
         animationType="slide"
         transparent={true}
         visible={modalVisible}
@@ -23,54 +24,63 @@ const Table = () => {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
+            <Text style={{color: '#272627', fontSize: 28}}>ADD VISITOR</Text>
             <TextInput
               placeholder="First Name"
               style={{
-                height: 40,
+                height: 56,
                 margin: 12,
                 borderWidth: 1,
                 padding: 10,
-                width: 350,
+                width: 342,
                 borderRadius: 10,
+                backgroundColor: '#E9EAE9',
               }}
             />
             <TextInput
               placeholder="Last Name"
               style={{
-                height: 40,
+                height: 56,
                 margin: 12,
                 borderWidth: 1,
                 padding: 10,
-                width: 350,
+                width: 342,
                 borderRadius: 10,
+                backgroundColor: '#E9EAE9',
               }}
             />
             <TextInput
               placeholder="Email"
               style={{
-                height: 40,
+                height: 56,
                 margin: 12,
                 borderWidth: 1,
                 padding: 10,
-                width: 350,
+                width: 342,
                 borderRadius: 10,
+                backgroundColor: '#E9EAE9',
               }}
             />
             <View
               style={{
+                width: '100%',
                 flexDirection: 'row',
-                alignContent: 'space-between',
-                justifyContent: 'space-between',
+                justifyContent: 'space-evenly',
               }}>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.textStyle}>Submit</Text>
+                <Text style={styles.textStyle}>BACK</Text>
               </Pressable>
               <Pressable
-                style={[styles.button, styles.buttonClose]}
+                style={{
+                  borderRadius: 20,
+                  padding: 10,
+                  elevation: 2,
+                  color: '#8D55A2',
+                }}
                 onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.textStyle}>BACK</Text>
+                <Text style={styles.textStyle}>ADD</Text>
               </Pressable>
             </View>
           </View>
@@ -88,21 +98,15 @@ const Table = () => {
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    marginTop: 22,
   },
   modalView: {
-    margin: 20,
     backgroundColor: 'white',
+    marginHorizontal: 20,
     borderRadius: 20,
     padding: 35,
-    alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,

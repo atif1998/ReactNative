@@ -3,19 +3,18 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 
 // create a component
-const Counter = () => {
+const Counter = ({route}) => {
+  const {itemId, otherParam} = route?.params;
   const [login, setLogin] = useState({
     name: '',
     email: '',
     password: '',
   });
   return (
-    <View style={{backgroundColor: 'black', flex: 1}}>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={login.name}
-      />
+    <View style={{backgroundColor: 'white', flex: 1}}>
+      <Text>{itemId}</Text>
+      <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+      <TextInput style={styles.input} value={login.name} />
       <Text>Counter</Text>
     </View>
   );

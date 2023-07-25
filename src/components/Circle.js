@@ -7,11 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Circle = ({mainStyle}) => {
   return (
     <View style={[styles.container, mainStyle]}>
-      <Ionicons
-        name="ellipsis-horizontal-outline"
-        size={20}
-        color={'#8D55A2'}
-      />
+      <Ionicons name="ellipsis-horizontal-outline" size={20} color={'black'} />
     </View>
   );
 };
