@@ -2,13 +2,14 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Left, Notification} from '../assests';
 
 // create a component
 const Header = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Ionicons name="arrow-back-outline" size={30} />
+        <Left />
         <Text style={styles.text}>My Bookings</Text>
       </View>
       <Text style={styles.text1}>Credits lefts: 24</Text>

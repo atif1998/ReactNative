@@ -2,14 +2,15 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Message, Notification} from '../assests';
 // create a component
 const Header2 = () => {
   return (
     <View style={styles.container}>
       <Ionicons name="reorder-three-outline" size={24} />
       <View style={styles.notify}>
-        <Ionicons name="document-text-outline" size={24} />
-        <Ionicons name="notifications-outline" size={24} />
+        <Message height={24} width={24} />
+        <Notification height={24} width={24} />
       </View>
     </View>
   );

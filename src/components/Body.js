@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Circle from './Circle';
-
+import {Left} from '../assests';
 // create a component
 const Body = () => {
   const [currentDate, setCurrentDate] = useState('');
@@ -20,25 +20,28 @@ const Body = () => {
     );
   }, []);
   return (
-    <View style={{marginHorizontal: 23}}>
-      <View style={styles.container}>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginTop: 5,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}>
-          <Text style={styles.text1}>Room name</Text>
-          <Circle mainStyle={{marginRight: 20}} />
-        </View>
-        <View
-          style={{flexDirection: 'row', alignItems: 'center', marginTop: 5}}>
-          <Text style={{marginLeft: 30}}>
-            {currentDate} <Ionicons name="arrow-forward-outline" size={14} />
-            -3:00PM
-          </Text>
-          <Text style={styles.text2}>Duration: 4 h</Text>
+    <View>
+      <View style={{marginHorizontal: 23}}>
+        <View style={styles.container}>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 5,
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}>
+            <Text style={styles.text1}>Room name</Text>
+
+            <Circle mainStyle={{marginRight: 20}} />
+          </View>
+          <View
+            style={{flexDirection: 'row', alignItems: 'center', marginTop: 5}}>
+            <Text style={{marginLeft: 30}}>
+              {currentDate} <Ionicons name="arrow-forward-outline" size={14} />
+              -3:00PM
+            </Text>
+            <Text style={styles.text2}>Duration: 4 h</Text>
+          </View>
         </View>
       </View>
     </View>

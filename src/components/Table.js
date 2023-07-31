@@ -8,6 +8,7 @@ import {
   View,
   TextInput,
 } from 'react-native';
+import {Left} from '../assests';
 
 const Table = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -91,6 +92,9 @@ const Table = () => {
         onPress={() => setModalVisible(true)}>
         <Text style={styles.textStyle}>Show Modal</Text>
       </Pressable>
+      <View>
+        <Left height={50} width={100} />
+      </View>
     </View>
   );
 };

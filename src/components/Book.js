@@ -12,10 +12,10 @@ const Book = () => {
         <Text style={styles.text}>Book a room</Text>
       </View>
       <View style={{paddingHorizontal: 27}}>
-        <Image
+        {/* <Image
           style={{width: '100%', height: 167, marginTop: 20}}
           source={require('../assests/images/Rectangle22803.png')}
-        />
+        /> */}
         <Text
           style={{
             color: '#7C3F92',
