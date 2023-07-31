@@ -1,16 +1,18 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Message, Notification} from '../assests';
+
+import {Menu, Message, Notification} from '../assests';
 // create a component
 const Header2 = () => {
   return (
-    <View style={styles.container}>
-      <Ionicons name="reorder-three-outline" size={24} />
-      <View style={styles.notify}>
-        <Message height={24} width={24} />
-        <Notification height={24} width={24} />
+    <View style={styles.main}>
+      <View style={styles.container}>
+        <Menu height={24} width={24} />
+        <View style={styles.notify}>
+          <Message height={24} width={24} />
+          <Notification height={24} width={24} />
+        </View>
       </View>
     </View>
   );
@@ -18,6 +20,7 @@ const Header2 = () => {
 
 // define your styles
 const styles = StyleSheet.create({
+  main: {borderBottomWidth: 1, borderColor: '#F5F6F4'},
   container: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -4,7 +4,8 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 
 // create a component
 const Counter = ({route}) => {
-  const {itemId, otherParam} = route?.params;
+  const itemId = route?.param?.itemId;
+  const otherParam = route?.param?.otherParam;
   const [login, setLogin] = useState({
     name: '',
     email: '',
