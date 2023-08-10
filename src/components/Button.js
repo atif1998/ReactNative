@@ -1,38 +1,53 @@
 //import liraries
-import React, {Component, useState} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import React from 'react';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import Text from './Text/index';
+import {useTheme} from './config/theme';
 
 // create a component
-const Button = ({naviagtion}) => {
+const Button = ({
+  onPress,
+  title = 'Sign in',
+  buttonStyle,
+  textStyles,
+  borderWidth = 1,
+  borderColor = '#8D55A2',
+  height = 40,
+  icon,
+}) => {
+  const colors = useTheme();
   return (
-    <View>
-      <View style={styles.container}>
+    <TouchableOpacity
+      style={[
+        buttonStyle,
+        {
+          height: height,
+          // borderWidth: 1,
+          borderWidth: borderWidth,
+          // borderColor: colors.appPrimary,
+          borderColor: borderColor,
+          borderRadius: 51,
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+      ]}
+      onPress={onPress}>
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        {icon && icon}
         <Text
-          style={{
-            color: '#8D55A2',
-          }}>
-          Button
+          style={[textStyles, {lineHeight: 28, marginLeft: icon ? 10 : 0}]}
+          regular
+          body1
+          appPrimary>
+          {title}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 // define your styles
-const styles = StyleSheet.create({
-  container: {
-    marginLeft: 20,
-    width: 377,
-    borderWidth: 1,
-    borderRadius: 50,
-    borderColor: '#8D55A2',
-    height: 40,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 50,
-  },
-});
+const styles = StyleSheet.create({});
 
 //make this component available to the app
 export default Button;

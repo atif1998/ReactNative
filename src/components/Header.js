@@ -2,7 +2,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Left, Notification} from '../assests';
+import {Left, Notification, Email, Reason, Calendar} from '../assests';
+import CustomTextInput from './TextInput';
 
 // create a component
 const Header = () => {
@@ -10,9 +11,63 @@ const Header = () => {
     <View>
       <View style={styles.container}>
         <Left />
-        <Text style={styles.text}>My Bookings</Text>
+        <Text style={styles.text}>Add Visitors</Text>
       </View>
-      <Text style={styles.text1}>Credits lefts: 24</Text>
+      <View style={{margin: 30}}>
+        <CustomTextInput
+          placeholder={'Name'}
+          mainStyle={{
+            marginBottom: 16,
+            height: 56,
+            width: 342,
+            borderColor: 'rgba(233, 234, 233, 1)',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+          }}
+        />
+        <CustomTextInput
+          placeholder={'Email'}
+          mainStyle={{
+            marginBottom: 16,
+            height: 56,
+            width: 342,
+            borderColor: 'rgba(233, 234, 233, 1)',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+          }}
+          icon={<Email />}
+        />
+        <CustomTextInput
+          placeholder={'Visit Duration max 14 Hours'}
+          mainStyle={{
+            marginBottom: 16,
+            height: 56,
+            width: 342,
+            borderColor: 'rgba(233, 234, 233, 1)',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+          }}
+          icon={<Calendar />}
+        />
+        <CustomTextInput
+          placeholder={'Custom'}
+          mainStyle={{
+            marginBottom: 16,
+            height: 56,
+            width: 342,
+            borderColor: 'rgba(233, 234, 233, 1)',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+          }}
+        />
+        <CustomTextInput
+          placeholder={'Add Custom Visit Reason'}
+          mainStyle={{
+            marginBottom: 16,
+            height: 56,
+            width: 342,
+            borderColor: 'rgba(233, 234, 233, 1)',
+            backgroundColor: 'rgba(250, 250, 250, 1)',
+          }}
+          icon={<Reason />}
+        />
+      </View>
     </View>
   );
 };

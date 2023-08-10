@@ -2,20 +2,17 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Left} from '../assests';
 
 // create a component
 const Book = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Ionicons name="arrow-back-outline" size={30} />
+        <Left width={24} height={24} />
         <Text style={styles.text}>Book a room</Text>
       </View>
       <View style={{paddingHorizontal: 27}}>
-        {/* <Image
-          style={{width: '100%', height: 167, marginTop: 20}}
-          source={require('../assests/images/Rectangle22803.png')}
-        /> */}
         <Text
           style={{
             color: '#7C3F92',
@@ -34,6 +31,7 @@ const Book = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
     marginLeft: 25,
